@@ -25,6 +25,18 @@ body {
 
 // STOPWATCH-------------------------------------------------------------
 .stopwatch {
+    .select-box {
+       label,select{
+           display: inline-block;
+           
+       }
+       select{
+           width: 40%;
+       }
+       label{
+           margin-right: 20px;
+       }
+    }
     background-color: white;
     padding: 70px;
     border-radius: 0 80px 0 80px;
@@ -44,18 +56,26 @@ body {
         margin-right: 8px;
     }
     #sw_start {
-         background-color: #45b29d;
+        background-color: #45b29d;
     }
     #sw_stop {
         background-color: #df5a49;
         display: none;
     }
     #sw_pause {
-
-         background-color: #efc94c;
+        background-color: #efc94c;
         display: none;
     }
     #sw_reset {
-         background-color: #334d5c;
+        background-color: #334d5c;
     }
+}
+
+//------------------------------------------------------------
+.robo-img {
+    height: 80px;
+    width: 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }

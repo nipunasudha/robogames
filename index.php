@@ -33,9 +33,9 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Stopwatch</a></li>
-        <li><a href="#">Score Board</a></li>
+      <li  class="active"><a href="index.php">Home</a></li>
+        <li><a href="stopwatch.php">Stopwatch</a></li>
+        <li><a href="scoreboard.php">Score Board</a></li>
         
       </ul>
     
@@ -45,7 +45,7 @@
 </nav>
 <div class="container">
 <div class="row-content">
-<h1>Home content goes here.</h1>
+
 </div>
 </div>
 

@@ -2,24 +2,60 @@ body {
     background-color: #26b786;
     .navbar {
         border-radius: 0;
-        .logo{
+        .logo {
             height: 60px;
-            
         }
-        .navbar-brand{
-padding-top: 8px;
-padding-right: 30px;
+        .navbar-brand {
+            padding-top: 8px;
+            padding-right: 30px;
         }
     }
     //---------------------
     .navbar-nav>li>a,
-     {
+    {
         padding: 30px 40px 0;
         height: 80px;
         font-size: 18px;
     }
     .navbar {
-        min-height:80px !important;
+        min-height: 80px !important;
     }
     //----------------------
+}
+
+// STOPWATCH-------------------------------------------------------------
+.stopwatch {
+    background-color: white;
+    padding: 70px;
+    border-radius: 0 80px 0 80px;
+    .counter {
+        font-size: 140px;
+        .digits {}
+    }
+    input {}
+    #sw_status {
+        font-size: 30px;
+    }
+    .btn {
+        border: none;
+        border-radius: 0 10px 0 10px;
+        font-size: 28px;
+        padding: 18px 30px;
+        margin-right: 8px;
+    }
+    #sw_start {
+         background-color: #45b29d;
+    }
+    #sw_stop {
+        background-color: #df5a49;
+        display: none;
+    }
+    #sw_pause {
+
+         background-color: #efc94c;
+        display: none;
+    }
+    #sw_reset {
+         background-color: #334d5c;
+    }
 }

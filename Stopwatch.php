@@ -33,9 +33,9 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li ><a href="#">Home</a></li>
-        <li class="active"><a href="#">Stopwatch</a></li>
-        <li><a href="#">Score Board</a></li>
+        <li ><a href="index.php">Home</a></li>
+        <li class="active"><a href="stopwatch.php">Stopwatch</a></li>
+        <li><a href="scoreboard.php">Score Board</a></li>
         
       </ul>
     
@@ -45,9 +45,43 @@
 </nav>
 <div class="container">
 <div class="row-content">
-<h1>Home content goes here.</h1>
+
+
+<div class="stopwatch">
+
+<div>
+    <h1>RoboGames Stopwatch</h1>
+   <div class="counter">
+    <span class='digits' id="sw_h">00</span>:
+    <span class='digits' id="sw_m">00</span>:
+    <span class='digits' id="sw_s">00</span>:
+    <span class='digits' id="sw_ms">00</span>
+   </div>
+    
+    
+    <input class="btn btn-primary btn-lg" type="button" value="Start" id="sw_start" />
+    <input class="btn btn-primary btn-lg" type="button" value="Pause" id="sw_pause" />
+    <input class="btn btn-primary btn-lg" type="button" value="Stop & Save"  id="sw_stop" />
+    <input class="btn btn-primary btn-lg" type="button" value="Reset" id="sw_reset" />
+    <br/>
+    <br/>
+    <span id="sw_status">Timer Standby</span>
+</div>
+
+
+
+</div>
+
+
+
 </div>
 </div>
 
+
+
+
+
+
+ <script src="./js/app.js"></script>
     </body>
 </html>

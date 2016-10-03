@@ -1,5 +1,23 @@
 body {
-  background: red;
+  background-color: #26b786;
+}
+body .navbar {
+  border-radius: 0;
+}
+body .navbar .logo {
+  height: 60px;
+}
+body .navbar .navbar-brand {
+  padding-top: 8px;
+  padding-right: 30px;
+}
+body .navbar-nav > li > a {
+  padding: 30px 40px 0;
+  height: 80px;
+  font-size: 18px;
+}
+body .navbar {
+  min-height: 80px !important;
 }
 
 /*# sourceMappingURL=style.css.map */

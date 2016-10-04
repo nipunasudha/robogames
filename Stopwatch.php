@@ -83,7 +83,7 @@ foreach(glob($dir.'/*.*') as $file) {
 
     </select>
                         <div class="counter">
-                            <span class='digits' id="sw_h">00</span>:
+                           <!-- <span class='digits' id="sw_h">00</span>: -->
                             <span class='digits' id="sw_m">00</span>:
                             <span class='digits' id="sw_s">00</span>:
                             <span class='digits' id="sw_ms">00</span>

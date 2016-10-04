@@ -68,14 +68,6 @@ body .navbar {
   background-color: #808b8d;
 }
 
-.robo-img {
-  height: 80px;
-  width: 80px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
 #myModal .counter-value {
   font-size: 150px;
   padding: 30px 40px;
@@ -83,6 +75,55 @@ body .navbar {
 }
 #myModal .selection {
   padding: 0 30px;
+}
+
+.scoreboard {
+  background: white;
+  padding: 40px;
+  border-radius: 0 30px 0 30px;
+}
+.scoreboard table {
+  width: 100%;
+}
+.scoreboard table .heading td {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  color: white;
+  background-color: #2d3e50;
+}
+.scoreboard table td {
+  border: 3px solid white;
+  text-align: center;
+  font-size: 18px;
+  background-color: #fcf3d8;
+}
+.scoreboard table .robo-img {
+  margin: auto;
+  height: 80px;
+  width: 80px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.scoreboard table .col-robot {
+  width: 80px;
+}
+.scoreboard table .col-rank {
+  background-color: #df5a49;
+  font-size: 35px;
+  color: white;
+}
+.scoreboard table .col-time, .scoreboard table .col-attempts {
+  padding: 0 15px;
+}
+.scoreboard table .col-time {
+  background-color: #b0e0d7;
+  color: black;
+}
+.scoreboard table .col-attempts {
+  background-color: #f6f6f6;
 }
 
 /*# sourceMappingURL=style.css.map */

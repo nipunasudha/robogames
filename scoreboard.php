@@ -44,12 +44,16 @@
   </div><!-- /.container-fluid -->
 </nav>
 <div class="container">
-<div class="row-content">
+<div class="row-content scoreboard">
 <table>
-  <th></th>
-  <tr>
-    <td>Robot</td>
+  
+  <tr class="heading">
+    <td class='col-robot'>Robot</td>
     <td>Team Name</td>
+    <td colspan=2>Round 1</td>
+    <td colspan=2>Round 2</td>
+    <td colspan=2>Round 3</td>
+    <td>Rank</td>
   </tr>
  
   
@@ -58,14 +62,20 @@
 $dir = "./teams";
 // Open a directory, and read its contents
 foreach(glob($dir.'/*.*') as $file) {
-echo "<tr><td>";
+echo "<tr><td class='col-robot'>";
 
 
 //	echo "<img class='robo-img' src='".$file."'>";
 echo "<div class='robo-img' style=\"background-image:url('".$file."')\"></div>";
 echo "</td><td>";
 echo $file;
-echo "</td></tr>";
+echo "</td><td class='col-attempts'>2 Attempts</td>
+<td class='col-time'>01:05:04</td>
+<td class='col-attempts'>3 Attempts</td>
+<td class='col-time'>01:05:04</td>
+<td class='col-attempts'>1 Attempts</td>
+<td class='col-time'>01:05:04</td>
+<td class='col-rank'>6</td></tr>";
 }
 
 

@@ -77,21 +77,67 @@ body {
 }
 
 //------------------------------------------------------------
-.robo-img {
-    height: 80px;
-    width: 80px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
 #myModal {
-    .counter-value { 
-        font-size:150px;
+    .counter-value {
+        font-size: 150px;
         padding: 30px 40px;
         text-align: center;
     }
-    .selection{
+    .selection {
         padding: 0 30px;
+    }
+}
+
+//============= Scoreboard ===================================
+.scoreboard {
+    background: white;
+    padding: 40px;
+    border-radius: 0 30px 0 30px;
+    table {
+        width: 100%;
+        .heading {
+            td {
+                text-align: center;
+                font-size: 18px;
+                font-weight: bold;
+                padding: 10px;
+                color: white;
+                background-color: #2d3e50;
+            }
+        }
+        td {
+            border: 3px solid white;
+            text-align: center;
+            font-size: 18px;
+            background-color: lighten($color: #efc94c, $amount: 30%);
+            
+        }
+        .robo-img {
+            margin: auto;
+            height: 80px;
+            width: 80px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .col-robot{
+            width: 80px;
+        }
+        .col-rank{
+            background-color: #df5a49;
+            font-size: 35px;
+            color: white;
+            
+        }
+        .col-time,.col-attempts{
+            padding: 0 15px;
+        }
+        .col-time{
+            background-color: lighten($color: #45b29d, $amount: 30%);
+            color: black;
+        }
+        .col-attempts{
+            background-color: #f6f6f6;
+        }
     }
 }

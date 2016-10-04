@@ -225,7 +225,18 @@ $(document).ready(function() {
             $('#sw_stop').hide()
             $('#sw_pause').hide()
             $('#sw_reset').show()
-            alert(time_value)
+            // alert(time_value)
+            $.ajax({
+                type: "POST",
+                url: "insertTime.php",
+                data: {
+                    time:time_value
+                },
+                success: function(resultData){
+                    console.log('added to the daatabase');
+                    console.log(resultData);
+                }
+            });
         });
         
         $('#sw_reset').on('click', function() {

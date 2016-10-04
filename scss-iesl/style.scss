@@ -1,5 +1,5 @@
 body {
-    background-color: #26b786;
+    background-color: darken($color: #26b786, $amount: 22%);
     .navbar {
         border-radius: 0;
         .logo {

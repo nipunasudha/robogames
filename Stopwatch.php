@@ -55,38 +55,10 @@
 
                 <div>
 
-                    <div class="form-group select-box">
-                        <label for="team-selector">Current Team</label>
-                        <select class="form-control" name="" id="#team-selector">
-  </div>
-
-
-
-   
-   
-
-<?php
-$dir = "./teams";
-// Open a directory, and read its contents
-foreach(glob($dir.'/*.*') as $file) {
-
-	echo "<option value='".$file."'>".$file."</option>";
-
-}
-
-
-
-
-?>
-
-
-
-    </select>
+                   
                         <div class="counter">
                            <!-- <span class='digits' id="sw_h">00</span>: -->
-                            <span class='digits' id="sw_m">00</span>:
-                            <span class='digits' id="sw_s">00</span>:
-                            <span class='digits' id="sw_ms">00</span>
+                            <span class='digits' id="sw_m">00</span>:<span class='digits' id="sw_s">00</span>:<span class='digits' id="sw_ms">00</span>
                         </div>
 
 
@@ -94,6 +66,7 @@ foreach(glob($dir.'/*.*') as $file) {
                         <input class="btn btn-primary btn-lg" type="button" value="Pause" id="sw_pause" />
                         <input class="btn btn-primary btn-lg" type="button" value="Stop & Save" id="sw_stop" />
                         <input class="btn btn-primary btn-lg" type="button" value="Reset" id="sw_reset" />
+                        <input class="btn btn-primary btn-lg" type="button" value="Save" id="sw_save" style="display:none;"/>
                         <br/>
                         <br/>
                         <span id="sw_status">Timer Standby</span>
@@ -110,7 +83,83 @@ foreach(glob($dir.'/*.*') as $file) {
 
 
 
+<!-- Button trigger modal
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button> -->
 
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Attempt Finished</h4>
+      </div>
+      <div class="modal-body">
+        <h1 class='counter-value'>-</h1>
+        <div class="row selection">
+        <div class="col-md-4">
+         <!-- ================================================================ -->
+        <div class="form-group select-box">
+                        <label for="team-selector">Current Team</label>
+                        <select class="form-control" name="" id="team-selector">
+<?php
+$dir = "./teams";
+// Open a directory, and read its contents
+foreach(glob($dir.'/*.*') as $file) {
+
+	echo "<option value='".$file."'>".$file."</option>";
+
+}
+
+?>
+
+    </select>
+    </div>
+        <!-- ================================================================ -->
+        
+        </div>
+        <div class="col-md-4">
+         <!-- ================================================================ -->
+        <div class="form-group select-box">
+                        <label for="round-selector">Round</label>
+                        <select class="form-control" name="" id="round-selector">
+<option value="1">Round 1</option>
+<option value="2">Round 2</option>
+<option value="3">Round 3</option>
+
+    </select>
+    </div>
+        <!-- ================================================================ -->
+        
+        </div>
+        <div class="col-md-4">
+         <!-- ================================================================ -->
+        <div class="form-group select-box">
+                        <label for="attempt-selector">Attempt</label>
+                        <select class="form-control" name="" id="attempt-selector">
+<option value="1">Attempt 1</option>
+<option value="2">Attempt 2</option>
+<option value="3">Attempt 3</option>
+
+    </select>
+    </div>
+        <!-- ================================================================ -->
+        
+        </div>
+       
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-lg btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-lg btn-primary modal-submit">Submit Attempt</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
         <script src="./js/app.js"></script>

@@ -21,11 +21,13 @@ body .navbar {
 }
 
 .stopwatch {
+  text-align: center;
   background-color: white;
   padding: 70px;
   border-radius: 0 80px 0 80px;
 }
-.stopwatch .select-box label, .stopwatch .select-box select {
+.stopwatch .select-box label,
+.stopwatch .select-box select {
   display: inline-block;
 }
 .stopwatch .select-box select {
@@ -36,6 +38,7 @@ body .navbar {
 }
 .stopwatch .counter {
   font-size: 140px;
+  text-align: center;
 }
 .stopwatch #sw_status {
   font-size: 30px;
@@ -61,6 +64,9 @@ body .navbar {
 .stopwatch #sw_reset {
   background-color: #334d5c;
 }
+.stopwatch #sw_save {
+  background-color: #808b8d;
+}
 
 .robo-img {
   height: 80px;
@@ -68,6 +74,15 @@ body .navbar {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+#myModal .counter-value {
+  font-size: 150px;
+  padding: 30px 40px;
+  text-align: center;
+}
+#myModal .selection {
+  padding: 0 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -43,11 +43,55 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
+<style>
+.eva{
+  z-index:100;
+  position:absolute;
+  display:none;
+}
+.mount{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  left:0;
+}
+
+</style>
+
 <div class="container">
 <div class="row-content">
+<img class='eva' src="./img/eva.png" alt="">
+<img class='mount' src="./img/mountains.png" alt="">
+</div>
+</div>
 
-</div>
-</div>
+
+
+<script>
+$(function() {
+    resize_all()
+})
+$(window).on('resize', resize_all)
+
+
+function resize_all() {
+    $('.eva').fadeIn(3000).height($(window).height()-100)
+    setMargins()
+        
+}
+function setMargins() {
+    width = $(window).width();
+    containerWidth = $(".eva").width();  
+    leftMargin = (width-containerWidth)/2;    
+    $(".eva").css("left", leftMargin);    
+}
+
+
+</script>
+
+
+
 
     </body>
 </html>

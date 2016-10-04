@@ -45,6 +45,7 @@
 </nav>
 <div class="container">
 <div class="row-content scoreboard">
+<img class='mount' src="./img/mountains.png" alt="">
 <table>
   
   <tr class="heading">

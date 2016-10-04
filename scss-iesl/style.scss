@@ -21,6 +21,18 @@ body {
         min-height: 80px !important;
     }
     //----------------------
+    .eva {
+        z-index: 100;
+        position: absolute;
+        display: none;
+    }
+    .mount {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+         z-index: -1000;
+    }
 }
 
 // STOPWATCH-------------------------------------------------------------
@@ -110,7 +122,6 @@ body {
             text-align: center;
             font-size: 18px;
             background-color: lighten($color: #efc94c, $amount: 30%);
-            
         }
         .robo-img {
             margin: auto;
@@ -120,23 +131,23 @@ body {
             background-position: center;
             background-size: cover;
         }
-        .col-robot{
+        .col-robot {
             width: 80px;
         }
-        .col-rank{
+        .col-rank {
             background-color: #df5a49;
             font-size: 35px;
             color: white;
-            
         }
-        .col-time,.col-attempts{
+        .col-time,
+        .col-attempts {
             padding: 0 15px;
         }
-        .col-time{
+        .col-time {
             background-color: lighten($color: #45b29d, $amount: 30%);
             color: black;
         }
-        .col-attempts{
+        .col-attempts {
             background-color: #f6f6f6;
         }
     }

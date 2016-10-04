@@ -19,6 +19,18 @@ body .navbar-nav > li > a {
 body .navbar {
   min-height: 80px !important;
 }
+body .eva {
+  z-index: 100;
+  position: absolute;
+  display: none;
+}
+body .mount {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  z-index: -1000;
+}
 
 .stopwatch {
   text-align: center;
@@ -115,7 +127,8 @@ body .navbar {
   font-size: 35px;
   color: white;
 }
-.scoreboard table .col-time, .scoreboard table .col-attempts {
+.scoreboard table .col-time,
+.scoreboard table .col-attempts {
   padding: 0 15px;
 }
 .scoreboard table .col-time {

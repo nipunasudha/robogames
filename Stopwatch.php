@@ -50,6 +50,7 @@
     <div class="container">
         <div class="row-content">
 
+<img class='mount' src="./img/mountains.png" alt="">
 
             <div class="stopwatch">
 

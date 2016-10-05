@@ -69,7 +69,7 @@ echo "<tr><td class='col-robot'>";
 //	echo "<img class='robo-img' src='".$file."'>";
 echo "<div class='robo-img' style=\"background-image:url('".$file."')\"></div>";
 echo "</td><td>";
-echo $file;
+echo 'Robo Name';
 echo "</td><td class='col-attempts'>2 Attempts</td>
 <td class='col-time'>01:05:04</td>
 <td class='col-attempts'>3 Attempts</td>

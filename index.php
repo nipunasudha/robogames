@@ -44,20 +44,6 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<style>
-.eva{
-  z-index:100;
-  position:absolute;
-  display:none;
-}
-.mount{
-  position:absolute;
-  bottom:0;
-  width:100%;
-  left:0;
-}
-
-</style>
 
 <div class="container">
 <div class="row-content">

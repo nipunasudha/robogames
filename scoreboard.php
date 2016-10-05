@@ -1,3 +1,8 @@
+<?php
+include("dbConnect.php");
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -88,7 +93,21 @@ echo "</td><td class='col-attempts'>2 Attempts</td>
 
 
 
+
 </table>
+    <?php
+    $sql = "SELECT record_time, team, round, attempt FROM team_time ORDER BY record_time ASC";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+            echo "record_time: " . $row["record_time"]. " - Team: " . $row["team"]. "round " . $row["round"]."attempt".$row["attempt"]. "<br>";
+        }
+    } else {
+        echo "0 results";
+    }
+    $conn->close();
+    ?>
 </div>
 </div>
 

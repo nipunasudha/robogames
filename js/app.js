@@ -298,31 +298,31 @@ $('#myModal').on('show.bs.modal', function(event) {
 
 })
 
-$('.modal-submit').on('click', function() {
-    data_team=$('#team-selector').val()
-    data_round=$('#round-selector').val()
-    data_attempt=$('#attempt-selector').val()
-//alert(data_team+"\n"+data_round+"\n"+data_attempt+"\n"+time_value);
-   if(submit_allowed){
-       submit_allowed=false
-        $.ajax({
-        type: "POST",
-        url: "insertTime.php",
-        data: {
-            time: time_value,
-            team:data_team,
-            round:data_round,
-            attempt:data_attempt
+// $('.modal-submit').on('click', function() {
+//     data_team=$('#team-selector').val()
+//     data_round=$('#round-selector').val()
+//     data_attempt=$('#attempt-selector').val()
 
-        },
-        success: function(resultData) {
-            console.log('added to the daatabase');
-            window.location='scoreboard.php'
-        }
-    });
+//    if(submit_allowed){
+//        submit_allowed=false
+//         $.ajax({
+//         type: "POST",
+//         url: "insertTime.php",
+//         data: {
+//             time: time_value,
+//             team:data_team,
+//             round:data_round,
+//             attempt:data_attempt
+
+//         },
+//         success: function(resultData) {
+//             console.log('added to the daatabase');
+//             window.location='scoreboard.php'
+//         }
+//     });
     
-   }
-})
+//    }
+// })
 
 
 //=========================================

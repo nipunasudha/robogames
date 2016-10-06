@@ -101,62 +101,11 @@
       </div>
       <div class="modal-body">
         <h1 class='counter-value'>-</h1>
-        <div class="row selection">
-        <div class="col-md-4">
-         <!-- ================================================================ -->
-        <div class="form-group select-box">
-                        <label for="team-selector">Current Team</label>
-                        <select class="form-control" name="" id="team-selector">
-<?php
-$dir = "./teams";
-// Open a directory, and read its contents
-foreach(glob($dir.'/*.*') as $file) {
 
-	echo "<option value='".$file."'>".$file."</option>";
-
-}
-
-?>
-
-    </select>
-    </div>
-        <!-- ================================================================ -->
-        
-        </div>
-        <div class="col-md-4">
-         <!-- ================================================================ -->
-        <div class="form-group select-box">
-                        <label for="round-selector">Round</label>
-                        <select class="form-control" name="" id="round-selector">
-<option value="1">Round 1</option>
-<option value="2">Round 2</option>
-<option value="3">Round 3</option>
-
-    </select>
-    </div>
-        <!-- ================================================================ -->
-        
-        </div>
-        <div class="col-md-4">
-         <!-- ================================================================ -->
-        <div class="form-group select-box">
-                        <label for="attempt-selector">Attempt</label>
-                        <select class="form-control" name="" id="attempt-selector">
-<option value="1">Attempt 1</option>
-<option value="2">Attempt 2</option>
-<option value="3">Attempt 3</option>
-
-    </select>
-    </div>
-        <!-- ================================================================ -->
-        
-        </div>
-       
-        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-lg btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-lg btn-primary modal-submit">Submit Attempt</button>
+        
       </div>
     </div>
   </div>

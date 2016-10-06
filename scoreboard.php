@@ -65,20 +65,54 @@ include("dbConnect.php");
   
 
 <?php
-$dir = "./teams";
-// Open a directory, and read its contents
-foreach(glob($dir.'/*.*') as $file) {
+
+    $sql = "SELECT name, attempt, hardwareMarks, testMarks, timingMarks, (hardwareMarks+testMarks+timingMarks) AS total FROM score ORDER BY total DESC";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+      $rank=1;
+        while($row = $result->fetch_assoc()) {
+
+            //echo "record_time: " .$row["name"]."   ".$row["total"]."   ".$rank."<br>";
+            
+
+
+
+
 echo "<tr><td class='col-robot'>";
+    echo "<div class='robo-img' style=\"background-image:url('./teams/".$row["name"].".jpg')\"></div>";
+    echo "</td><td class='col-team'>";
+    echo $row["name"];
+    echo "</td><td class='col-attempt'>".$row["attempt"]."</td>
+    <td class='col-score'>".$row["total"]."</td>
+    <td class='col-rank'>".$rank."</td></tr>";
 
 
-//	echo "<img class='robo-img' src='".$file."'>";
-echo "<div class='robo-img' style=\"background-image:url('".$file."')\"></div>";
-echo "</td><td class='col-team'>";
-echo 'Robo Name';
-echo "</td><td class='col-attempt'>Attempt-2</td>
-<td class='col-score'>500</td>
-<td class='col-rank'>6</td></tr>";
-}
+
+$rank++;
+            
+        }
+        //echo 'done!';
+    } else {
+        echo "0 results";
+    }
+    $conn->close();
+  
+
+
+
+
+//=======================================================================================================
+$dir = "./teams";
+// foreach(glob($dir.'/*.*') as $file) {
+//     echo "<tr><td class='col-robot'>";
+//     echo "<div class='robo-img' style=\"background-image:url('".$file."')\"></div>";
+//     echo "</td><td class='col-team'>";
+//     echo 'Robo Name';
+//     echo "</td><td class='col-attempt'>Attempt-2</td>
+//     <td class='col-score'>500</td>
+//     <td class='col-rank'>6</td></tr>";
+// }
 
 
 
@@ -92,22 +126,22 @@ echo "</td><td class='col-attempt'>Attempt-2</td>
 
 </table>
     <?php
-    $sql = "SELECT name, attempt, hardwareMarks, testMarks, timingMarks, (hardwareMarks+testMarks+timingMarks) AS total FROM score ORDER BY total DESC";
-    $result = $conn->query($sql);
+    // $sql = "SELECT name, attempt, hardwareMarks, testMarks, timingMarks, (hardwareMarks+testMarks+timingMarks) AS total FROM score ORDER BY total DESC";
+    // $result = $conn->query($sql);
 
-    if ($result->num_rows > 0) {
-      $rank=1;
-        while($row = $result->fetch_assoc()) {
+    // if ($result->num_rows > 0) {
+    //   $rank=1;
+    //     while($row = $result->fetch_assoc()) {
 
-            echo "record_time: " . $row["name"]."   ".$row["total"]."   ".$rank."<br>";
-            $rank++;
+    //         echo "record_time: " . $row["name"]."   ".$row["total"]."   ".$rank."<br>";
+    //         $rank++;
             
-        }
-        echo 'done!';
-    } else {
-        echo "0 results";
-    }
-    $conn->close();
+    //     }
+    //     echo 'done!';
+    // } else {
+    //     echo "0 results";
+    // }
+    // $conn->close();
     ?>
 </div>
 </div>

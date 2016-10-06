@@ -65,9 +65,9 @@
 
                         <input class="btn btn-primary btn-lg" type="button" value="Start" id="sw_start" />
                         <input class="btn btn-primary btn-lg" type="button" value="Pause" id="sw_pause" />
-                        <input class="btn btn-primary btn-lg" type="button" value="Stop & Save" id="sw_stop" />
+                        <input class="btn btn-primary btn-lg" type="button" value="Stop" id="sw_stop" />
                         <input class="btn btn-primary btn-lg" type="button" value="Reset" id="sw_reset" />
-                        <input class="btn btn-primary btn-lg" type="button" value="Save" id="sw_save" style="display:none;"/>
+                        <input class="btn btn-primary btn-lg" type="button" value="View" id="sw_save" style="display:none;"/>
                         <br/>
                         <br/>
                         <span id="sw_status">Timer Standby</span>

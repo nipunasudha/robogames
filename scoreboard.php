@@ -96,7 +96,7 @@ echo "</td><td class='col-attempts'>2 Attempts</td>
 
 </table>
     <?php
-    $sql = "SELECT record_time, team, round, attempt FROM team_time ORDER BY record_time ASC";
+    $sql = "SELECT record_time, team, round, attempt FROM team_time GROUP BY team ORDER BY SUM(record_time)/sum(round) ASC";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {

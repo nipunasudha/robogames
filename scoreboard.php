@@ -57,9 +57,8 @@ include("dbConnect.php");
   <tr class="heading">
     <td class='col-robot'>Robot</td>
     <td>Team Name</td>
-    <td colspan=2>Round 1</td>
-    <td colspan=2>Round 2</td>
-    <td colspan=2>Round 3</td>
+    <td>Highest Score Attempt</td>
+    <td>Current Round Score</td>
     <td>Rank</td>
   </tr>
  
@@ -74,14 +73,10 @@ echo "<tr><td class='col-robot'>";
 
 //	echo "<img class='robo-img' src='".$file."'>";
 echo "<div class='robo-img' style=\"background-image:url('".$file."')\"></div>";
-echo "</td><td>";
+echo "</td><td class='col-team'>";
 echo 'Robo Name';
-echo "</td><td class='col-attempts'>2 Attempts</td>
-<td class='col-time'>01:05:04</td>
-<td class='col-attempts'>3 Attempts</td>
-<td class='col-time'>01:05:04</td>
-<td class='col-attempts'>1 Attempts</td>
-<td class='col-time'>01:05:04</td>
+echo "</td><td class='col-attempt'>Attempt-2</td>
+<td class='col-score'>500</td>
 <td class='col-rank'>6</td></tr>";
 }
 
@@ -97,13 +92,18 @@ echo "</td><td class='col-attempts'>2 Attempts</td>
 
 </table>
     <?php
-    $sql = "SELECT record_time, team, round, attempt FROM team_time GROUP BY team ORDER BY SUM(record_time)/sum(round) ASC";
+    $sql = "SELECT name, attempt, hardwareMarks, testMarks, timingMarks, (hardwareMarks+testMarks+timingMarks) AS total FROM score ORDER BY total DESC";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
+      $rank=1;
         while($row = $result->fetch_assoc()) {
-            echo "record_time: " . $row["record_time"]. " - Team: " . $row["team"]. "round " . $row["round"]."attempt".$row["attempt"]. "<br>";
+
+            echo "record_time: " . $row["name"]."   ".$row["total"]."   ".$rank."<br>";
+            $rank++;
+            
         }
+        echo 'done!';
     } else {
         echo "0 results";
     }

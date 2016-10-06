@@ -108,7 +108,7 @@ body .mount {
 .scoreboard table td {
   border: 3px solid white;
   text-align: center;
-  font-size: 15px;
+  font-size: 25px;
   background-color: #fcf3d8;
 }
 .scoreboard table .robo-img {
@@ -124,19 +124,16 @@ body .mount {
 }
 .scoreboard table .col-rank {
   background-color: #df5a49;
-  font-size: 25px;
   color: white;
 }
-.scoreboard table .col-time,
-.scoreboard table .col-attempts {
-  padding: 0 15px;
-}
-.scoreboard table .col-time {
+.scoreboard table .col-team {
   background-color: #b0e0d7;
   color: black;
+  font-weight: 600;
 }
-.scoreboard table .col-attempts {
-  background-color: #f6f6f6;
+.scoreboard table .col-score {
+  background-color: #b0e0d7;
+  color: black;
 }
 
 .enter {

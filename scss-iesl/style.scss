@@ -120,7 +120,7 @@ body {
         td {
             border: 3px solid white;
             text-align: center;
-            font-size: 15px;
+            font-size: 25px;
             background-color: lighten($color: #efc94c, $amount: 30%);
         }
         .robo-img {
@@ -136,23 +136,24 @@ body {
         }
         .col-rank {
             background-color: #df5a49;
-            font-size: 25px;
+            
             color: white;
         }
-        .col-time,
-        .col-attempts {
-            padding: 0 15px;
+        .col-team {
+            background-color: lighten($color: #45b29d, $amount: 30%);
+            
+            color: black;
+            font-weight: 600;
         }
-        .col-time {
+        
+        .col-score {
             background-color: lighten($color: #45b29d, $amount: 30%);
             color: black;
         }
-        .col-attempts {
-            background-color: #f6f6f6;
-        }
+        
     }
 }
-
+//=============================== enter =======================================
 .enter {
     background: white;
     padding: 40px;

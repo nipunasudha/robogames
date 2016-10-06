@@ -38,6 +38,7 @@
                     <li><a href="index.php">Home</a></li>
                     <li class="active"><a href="stopwatch.php">Stopwatch</a></li>
                     <li><a href="scoreboard.php">Score Board</a></li>
+        <li><a href="enter.php">Enter Data</a></li>
 
                 </ul>
 

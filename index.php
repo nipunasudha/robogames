@@ -36,6 +36,7 @@
       <li  class="active"><a href="index.php">Home</a></li>
         <li><a href="stopwatch.php">Stopwatch</a></li>
         <li><a href="scoreboard.php">Score Board</a></li>
+        <li><a href="enter.php">Enter Data</a></li>
         
       </ul>
     
@@ -62,7 +63,7 @@ $(window).on('resize', resize_all)
 
 
 function resize_all() {
-    $('.eva').fadeIn(3000).height($(window).height()-100)
+    $('.eva').fadeIn(1000).height($(window).height()-100)
     setMargins()
         
 }

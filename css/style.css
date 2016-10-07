@@ -1,5 +1,6 @@
 body {
   background-color: #135a42;
+  overflow-y:auto;
 }
 body .navbar {
   border-radius: 0;
@@ -25,7 +26,7 @@ body .eva {
   display: none;
 }
 body .mount {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   left: 0;

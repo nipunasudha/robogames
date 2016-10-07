@@ -70,8 +70,17 @@ include("dbConnect.php");
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-      $rank=1;
+      $rank=0;
+        $count = 1;
+        $pre = null;
         while($row = $result->fetch_assoc()) {
+            if($pre == $row["total"]){
+                $count++;
+            }
+            else{
+                $rank+=$count;
+                $count = 1;
+            }
 
             //echo "record_time: " .$row["name"]."   ".$row["total"]."   ".$rank."<br>";
             
@@ -87,10 +96,7 @@ echo "<tr><td class='col-robot'>";
     <td class='col-score'>".$row["total"]."</td>
     <td class='col-rank'>".$rank."</td></tr>";
 
-
-
-$rank++;
-            
+        $pre = $row["total"];
         }
         //echo 'done!';
     } else {
